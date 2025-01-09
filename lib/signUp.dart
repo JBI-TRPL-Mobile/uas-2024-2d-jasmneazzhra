@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:template_project/homePage.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -174,8 +175,14 @@ class _SignUpPageState extends State<SignUpPage> {
                               TextButton(
                                 onPressed: () {
                                   Navigator.of(context).pop();
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const HomePage(),
+                                    ),
+                                    );
                                 },
-                                child: const Text('Close'),
+                                child: const Text('Go to Home'),
                               ),
                             ],
                           ),
