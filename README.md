@@ -1,17 +1,32 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/eSYf9ZVB)
-# template_project
+# UAS Praktikum Perangkat Bergerak
+# Jasmine Az Zahra Ihsani 2D TRPL
+# 362358302096
 
-A new Flutter project.
+## Start Page
+![StartPage](assets/StartPage.jpg)
+terdapat 2 tombol, tombol akan mengarah 'Sign In' akan mengarah ke SIgnInPage dan tombol 'Sign Up' akan mengarah ke SignUp Page 
 
-## Getting Started
+## Sign In Page
+![SignInPage](assets/SignInPage.jpg)
+Masukkan Email dan password sesuai dengan akun yang sudah dibuat, jika anda belum punya akun, klik tombol 'Sign Up' yang nanti akan diarahkan ke Sign Up Page
 
-This project is a starting point for a Flutter application.
+## Sign Up Page
+![SignUpPage](assets/SignUpPage.jpg)
+Masukkan data yang diminta yang nantinya akan tersave ke datauser.json, jika anda sudah punya akun, klik tombol 'Sign In' yang nanti akan diarahkan ke Sign In Page
 
-A few resources to get you started if this is your first Flutter project:
+akan terjadi peringatan mengisi data jika data tidak sesuai. 
+![warning](assets/Error.jpg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Home Page
+![homePage](assets/HomePage.jpg)
+Home Page
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Message Page
+![MessagePage](assets/MesaagePage.jpg)
+Akan dapat membuat pesan, dan tersimpan di message.json
+
+## Profil Page
+![ProfilPage](assets/ProfilPage1.jpg)
+![ProfilPage](assets/ProfilePage2.jpg)
+![PopUp](assets/ProfilPopUp.jpg)
+Berisi beberapa data, dan akan ada tombol Log out. Ketika tombol 'Log Out' dipencet, akan muncul pop up dengan tomvol 'cancel' yang akan tetap berada di 'profil Page' dan 'Log OUt' yang akan diarahkan ke 'Start Page'

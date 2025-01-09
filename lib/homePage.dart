@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'messagePage.dart';
+import 'profilePage.dart'; // Import ProfilePage
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,9 +15,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = [
     const HomePageContent(),
     const MessagePage(),
-    const Center(
-      child: Text('Profile Page'),
-    ),
+    const ProfilePage(), // Ganti dengan ProfilePage
   ];
 
   @override

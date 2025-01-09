@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:template_project/homePage.dart';
+import 'package:template_project/messagePage.dart';
+import 'package:template_project/profilePage.dart';
 import 'package:template_project/signIn.dart';
 import 'signUp.dart';
 import 'start.dart';
-import 'homePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,10 @@ Widget build(BuildContext context) {
     routes: {
       '/signIn': (context) => const SignInPage(),
       '/signUp': (context) => SignUpPage(),
-      '/home' : (context) => HomePage()
+      '/home' : (context) => HomePage(),
+      '/message': (context) => MessagePage(),
+      '/profile': (context) => ProfilePage(),
+      '/start': (context) => Start()
     },
   );
  }

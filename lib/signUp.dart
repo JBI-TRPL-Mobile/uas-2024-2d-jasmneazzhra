@@ -1,5 +1,10 @@
+import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:template_project/homePage.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:template_project/models/user.dart'; // Import model User
+import 'homePage.dart';
+import 'package:template_project/signIn.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -14,6 +19,21 @@ class _SignUpPageState extends State<SignUpPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
+
+  // Function to save user data into a JSON file
+  Future<void> _saveUserData(User user) async {
+    final directory = await getApplicationDocumentsDirectory();
+    final file = File('${directory.path}/datauser.json');
+
+    // Check if the file exists, if not, create a new file
+    if (!file.existsSync()) {
+      await file.create();
+    }
+
+    // Save user data into JSON
+    String userData = json.encode(user.toJson());
+    await file.writeAsString(userData);
+  }
 
   @override
   void dispose() {
@@ -165,6 +185,14 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
+                        User user = User(
+                          name: _nameController.text,
+                          email: _emailController.text,
+                          password: _passwordController.text,
+                        );
+
+                        _saveUserData(user); // menyimpan ke JSON file
+
                         showDialog(
                           context: context,
                           builder: (context) => AlertDialog(
@@ -178,9 +206,10 @@ class _SignUpPageState extends State<SignUpPage> {
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => const HomePage(),
+                                      builder: (context) =>
+                                          const HomePage(), // Navigate to HomePage
                                     ),
-                                    );
+                                  );
                                 },
                                 child: const Text('Go to Home'),
                               ),
@@ -194,7 +223,13 @@ class _SignUpPageState extends State<SignUpPage> {
                   const SizedBox(height: 20),
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context); 
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const SignInPage(), // Navigate to SignInPage
+                        ),
+                      );
                     },
                     child: const Text(
                       'Already have an account? Sign In',
