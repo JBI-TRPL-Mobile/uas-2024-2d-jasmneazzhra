@@ -24,7 +24,7 @@ class SignInPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Welcome Back',
+                  'Sign In',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 32,
@@ -109,18 +109,16 @@ class SignInPage extends StatelessWidget {
                     IconButton(
                       icon: const Icon(Icons.g_mobiledata,
                           color: Colors.white,
-                          size: 40), // Replace with Google logo
+                          size: 40),
                       onPressed: () {
-                        // Add Google sign-in logic here
                       },
                     ),
                     const SizedBox(width: 20),
                     IconButton(
                       icon: const Icon(Icons.facebook,
                           color: Colors.white,
-                          size: 40), // Replace with Facebook logo
+                          size: 40),
                       onPressed: () {
-                        // Add Facebook sign-in logic here
                       },
                     ),
                   ],

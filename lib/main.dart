@@ -19,8 +19,8 @@ Widget build(BuildContext context) {
     ),
     home: const Start(),
     routes: {
-      '/signIn': (context) => const SignInPage()
-      // '/signUp': (context) => const SignUpPage()
+      '/signIn': (context) => const SignInPage(),
+      '/signUp': (context) => SignUpPage()
     },
   );
  }
